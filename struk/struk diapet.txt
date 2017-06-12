@@ -1,0 +1,10 @@
+				            Apotek Terserah
+
+====================================================================
+
+              ID Obat   		    :  2
+              Nama Obat   		    :  diapet
+              Jumlah   		        :  1pc
+              Harga Satuan		    :  @Rp. 10000
+
+            Terimakasih Telah Berbelanja di Apotek Terserah

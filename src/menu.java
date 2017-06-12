@@ -24,7 +24,7 @@ public class menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dataobat button1 = new dataobat();
-                menu.dispose();
+
 
             }
         });

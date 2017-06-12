@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * Created by FAN-PC on 6/7/2017.
+ * Created by RHAMA-PC on 6/7/2017.
  */
 
 public class delete extends JFrame {
