@@ -9,7 +9,7 @@ public class dataobat
     public dataobat()
     {
         JFrame f = new JFrame();
-        f.setTitle("Data Obat");
+        f.setTitle("Data Obat Apotek Terserah");
         f.setDefaultCloseOperation( EXIT_ON_CLOSE );
         f.pack();
         f.setVisible(true);
