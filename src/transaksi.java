@@ -9,6 +9,9 @@ import java.sql.Date;
 
 import static java.lang.System.err;
 
+/**
+ * Created by RHAMA-PC on 5/25/2017.
+ */
 
 public class transaksi extends JFrame {
 
