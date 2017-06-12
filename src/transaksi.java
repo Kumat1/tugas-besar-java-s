@@ -13,7 +13,9 @@ public class transaksi extends JFrame {
     Statement stat;
     ResultSet rs;
 
+
     public transaksi() {
+
 
         Koneksi DB = new Koneksi();
         DB.config();
