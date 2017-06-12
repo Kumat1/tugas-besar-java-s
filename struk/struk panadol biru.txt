@@ -1,0 +1,10 @@
+				            Apotek Terserah
+
+====================================================================
+
+ID Obat   		    :  1
+Nama Obat   		:  panadol biru
+Jumlah   		    :  3pc
+Harga Satuan		:  @Rp. 6000
+
+            Terimakasih Telah Berbelanja di Apotek Terserah

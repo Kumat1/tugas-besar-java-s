@@ -108,12 +108,12 @@ public class transaksi extends JFrame {
                 try {
                     String sep = System.lineSeparator();
 
-                    String str = "				Struk Belanja" +sep+
+                    String str = "				            Apotek Terserah" +sep+
                             sep+"====================================================================" + sep +
-                            sep + "ID Obat   		:  " + txt1.getText() +
-                            sep + "Nama Obat   		:  " + txt2.getText()  +
-                            sep + "Jumlah   		:  " + txt4.getText() + "pc" +
-                            sep + "Harga Satuan		:  " + "@" + "Rp. " + txt3.getText() + sep +
+                            sep + "              ID Obat   		    :  " + txt1.getText() +
+                            sep + "              Nama Obat   		    :  " + txt2.getText()  +
+                            sep + "              Jumlah   		        :  " + txt4.getText() + "pc" +
+                            sep + "              Harga Satuan		    :  " + "@" + "Rp. " + txt3.getText() + sep + sep+
 
 
                             "            Terimakasih Telah Berbelanja di Apotek Terserah";
@@ -147,7 +147,7 @@ public class transaksi extends JFrame {
             }
         });
 
-
+        setTitle(" Transaksi Pembelian ");
         JLabel aa = new JLabel("Transaksi");
         aa.setBounds(70, 20, 500, 50);
 
