@@ -5,8 +5,13 @@ import java.awt.event.ActionListener;
 
 public class home extends JFrame
 {
+
+
     public home(){
         JPanel p = new JPanel();
+
+        getContentPane().setBackground(new Color(0,255,255));
+
 
         //  Menentukan title bar di Frame
         setTitle("Tugas Besar");
@@ -42,6 +47,7 @@ public class home extends JFrame
 
         //  Membuat Objek Button
         JButton button = new JButton("Login");
+        getRootPane().setDefaultButton(button);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,5 +65,8 @@ public class home extends JFrame
     public static void main(String[] args)
     {
         home h = new home();
+
+        h.setBackground(Color.CYAN);
+
     }
 }

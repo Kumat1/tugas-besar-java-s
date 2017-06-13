@@ -3,10 +3,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static java.awt.Color.CYAN;
+
 public class menu {
     public menu()
     {
         JFrame menu = new JFrame();
+
+
+        menu.getContentPane().setBackground(new Color(0,255,255));
         menu.setTitle("Menu");
         menu.setSize(600, 500);
         menu.setLocationRelativeTo(null);
@@ -23,9 +28,7 @@ public class menu {
         data.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dataobat button1 = new dataobat();
-
-
+                new dataobat();
             }
         });
 
@@ -33,7 +36,7 @@ public class menu {
         transaksi.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                transaksi button2 = new transaksi();
+                new transaksi();
                 menu.dispose();
             }
         });
@@ -42,7 +45,7 @@ public class menu {
         insert.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                insert button3  = new insert();
+                new insert();
                 menu.dispose();
             }
         });
@@ -51,7 +54,7 @@ public class menu {
         update.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                update button4  = new update();
+                new update();
                 menu.dispose();
             }
         });
@@ -60,7 +63,7 @@ public class menu {
         delete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                delete button5  = new delete();
+                new delete();
                 menu.dispose();
             }
         });
@@ -69,7 +72,9 @@ public class menu {
        logout.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
-               home log = new home();
+
+               new home();
+               menu.dispose();
            }
        });
 

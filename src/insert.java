@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -13,6 +14,7 @@ public class insert extends JFrame {
         JTextField txt1 = new JTextField();
         JTextField txt2 = new JTextField();
         JTextField txt3 = new JTextField();
+        getContentPane().setBackground(new Color(0,255,255));
 
         JButton button = new JButton("Insert");
         button.addActionListener(new ActionListener() {

@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -21,8 +22,10 @@ public class login extends JFrame {
         con = DB.con;
         stat = DB.stm;
         JTextField txt1 = new JTextField();
-        JTextField txt2 = new JTextField();
+        JPasswordField txt2 = new JPasswordField();
         JButton button = new JButton("Login");
+        getRootPane().setDefaultButton(button);
+        getContentPane().setBackground(new Color(0,255,255));
 
         button.addActionListener(new ActionListener() {
             @Override

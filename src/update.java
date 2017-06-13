@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -10,12 +11,15 @@ public class update extends JFrame {
 
     public update() {
         setTitle("Update Data obat");
+        getContentPane().setBackground(new Color(0,255,255));
         JTextField txt = new JTextField();
         JTextField txt1 = new JTextField();
         JTextField txt2 = new JTextField();
         JTextField txt3 = new JTextField();
 
+
         JButton button = new JButton("Update");
+
 
         button.addActionListener(new ActionListener() {
             @Override

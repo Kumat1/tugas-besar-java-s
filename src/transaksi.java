@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -15,6 +16,7 @@ public class transaksi extends JFrame {
 
 
     public transaksi() {
+        getContentPane().setBackground(new Color(0,255,255));
 
 
         Koneksi DB = new Koneksi();

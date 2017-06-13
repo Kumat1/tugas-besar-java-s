@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -17,6 +18,7 @@ public class delete extends JFrame {
     String sql;
 
     delete(){
+        getContentPane().setBackground(new Color(0,255,255));
         setTitle("Delete Data Obat");
 
         Koneksi DB = new Koneksi();
