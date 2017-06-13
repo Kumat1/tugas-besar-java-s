@@ -1,0 +1,11 @@
+				Struk Belanja
+
+====================================================================
+
+ID Obat   		    :  4
+Nama Obat   		:  panadol merah
+Jumlah   		    :  3pc
+Harga Satuan		:  @Rp. 3000
+Total Bayar   		:  Rp. 9000
+
+            Terimakasih Telah Berbelanja di Apotek Terserah

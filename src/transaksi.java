@@ -27,7 +27,7 @@ public class transaksi extends JFrame {
         JLabel txt4 = new JLabel();
         JLabel total = new JLabel();
 
-        JTextField jumlah = new JTextField();
+        JTextField jumlah1 = new JTextField();
 
         JButton button = new JButton("Beli");
         button.addActionListener(new ActionListener() {
@@ -47,14 +47,15 @@ public class transaksi extends JFrame {
                             JOptionPane.showMessageDialog(null, "Anda Belum Mengisi Data");
                         }
                         else {
-                            int jlh = Integer.valueOf(jumlah.getText());
+                            int jlh = Integer.valueOf(jumlah1.getText());
 
                             stat = con.createStatement();
                             stat.addBatch("UPDATE obat SET jumlah = jumlah - '" + jlh + "'WHERE ID = '"
                                     + Integer.valueOf(txt1.getText()) + "'");
-                            stat.addBatch("INSERT INTO transaksi(ID,nama,jumlah,harga)" + "VALUES('"
+                            stat.addBatch("INSERT INTO transaksi(ID,nama,jumlah,harga,total)" + "VALUES('"
                                     + Integer.valueOf(txt1.getText()) + "','" + txt2.getText() + "','"
-                                    + Integer.valueOf(txt4.getText())  + "','" + Integer.valueOf(txt3.getText()) + "')");
+                                    + Integer.valueOf(txt4.getText())  + "','" + Integer.valueOf(txt3.getText())+ "','"
+                                    + Integer.valueOf(total.getText())  +"')");
 
                             int[] rs = stat.executeBatch();
                             stat.close();
@@ -82,21 +83,22 @@ public class transaksi extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    stat = con.createStatement();
-                    String query = "SELECT id_transaksi from obat WHERE ID = '" + Integer.valueOf(txt1.getText()) + "'";
-                    stat.executeQuery(query);
-                    ResultSet rs = stat.getResultSet();
-                    while (rs.next()) {
-                        int idtransaksi = rs.getInt("id_transaksi");
-                    }
+//                    stat = con.createStatement();
+//                    String query = "SELECT id_transaksi from obat WHERE ID = '" + Integer.valueOf(txt1.getText()) + "'";
+//                    stat.executeQuery(query);
+//                    ResultSet rs = stat.getResultSet();
+//                    while (rs.next()) {
+//                        int idtransaksi = rs.getInt("id_transaksi");
+//                    }
                     String sep = System.lineSeparator();
 
                     String str = "				Struk Belanja" +sep+
                             sep+"====================================================================" + sep +
-                            sep + "ID Obat   		:  " + txt1.getText() +
+                            sep + "ID Obat   		    :  " + txt1.getText() +
                             sep + "Nama Obat   		:  " + txt2.getText()  +
-                            sep + "Jumlah   		:  " + jumlah.getText() + "pc" +
-                            sep + "Harga Satuan		:  " + "@" + "Rp. " + txt3.getText() + sep +
+                            sep + "Jumlah   		    :  " + jumlah1.getText() + "pc" +
+                            sep + "Harga Satuan		:  " + "@" + "Rp. " + txt3.getText() +
+                            sep + "Total Bayar   		:  "+"Rp. " + total.getText() + sep +sep +
 
 
                             "            Terimakasih Telah Berbelanja di Apotek Terserah";
@@ -116,8 +118,6 @@ public class transaksi extends JFrame {
 
                 } catch (IOException iox) {
                     iox.printStackTrace();
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
                 }
             }
         });
@@ -149,7 +149,11 @@ public class transaksi extends JFrame {
                         txt3.setText(String.valueOf(harga));
                         txt2.setText(nama);
                         txt4.setText(String.valueOf(jumlah));
+                        int jumlah2 = Integer.valueOf(jumlah1.getText());
+                        int total1 = jumlah2 * harga;
+                        total.setText(String.valueOf(total1));
                     }
+
 
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -186,8 +190,8 @@ public class transaksi extends JFrame {
         txt1.setEnabled(true);
         txt1.setBounds(160, 65, 75, 25);
 
-        jumlah.setEnabled(true);
-        jumlah.setBounds(160, 115, 75, 25);
+        jumlah1.setEnabled(true);
+        jumlah1.setBounds(160, 115, 75, 25);
 
         txt2.setSize(100, 30);
         txt2.setBounds(160, 162, 150, 25);
@@ -201,12 +205,12 @@ public class transaksi extends JFrame {
         total.setSize(100,30);
         total.setBounds(160,312,150,25);
 
-        button.setBounds(70, 315, 100, 25);
-        button1.setBounds(210, 315, 100, 25);
-        button2.setBounds(70, 360, 100, 25);
+        button.setBounds(70, 360, 100, 25);
+        button1.setBounds(210, 360, 100, 25);
+        button2.setBounds(70, 405,100,25);
         button3.setBounds(70, 20, 100, 25);
-        button4.setBounds(210, 360, 100, 25);
-        setSize(400, 450);
+        button4.setBounds(210,405,100,25);
+        setSize(400, 500);
         setLocationRelativeTo(null);
         setLayout(null);
         add(a);
@@ -218,14 +222,14 @@ public class transaksi extends JFrame {
         add(txt2);
         add(txt3);
         add(txt5);
-        add(jumlah);
+        add(jumlah1);
         add(button);
         add(button1);
         add(button2);
         add(button3);
         add(button4);
-        // add(e);
-        //add(total);
+        add(e);
+        add(total);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
