@@ -10,7 +10,7 @@ public class menu {
     {
         JFrame menu = new JFrame();
 
-
+        menu.setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         menu.getContentPane().setBackground(new Color(0,255,255));
         menu.setTitle("Menu");
         menu.setSize(600, 500);

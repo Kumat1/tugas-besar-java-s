@@ -18,13 +18,15 @@ public class delete extends JFrame {
     String sql;
 
     delete(){
-        getContentPane().setBackground(new Color(0,255,255));
+
         setTitle("Delete Data Obat");
 
         Koneksi DB = new Koneksi();
         DB.config();
         con = DB.con;
         stat = DB.stm;
+
+        setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         JTextField search= new JTextField();
         JButton button = new JButton("Delete");
         button.addActionListener(new ActionListener()

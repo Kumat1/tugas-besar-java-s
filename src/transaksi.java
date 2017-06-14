@@ -17,13 +17,13 @@ public class transaksi extends JFrame {
 
 
     public transaksi() {
-        getContentPane().setBackground(new Color(0,255,255));
-
 
         Koneksi DB = new Koneksi();
         DB.config();
         con = DB.con;
         stat = DB.stm;
+
+        setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         JTextField txt1 = new JTextField();
         JTextField txt2 = new JTextField();
         JTextField txt3 = new JTextField();

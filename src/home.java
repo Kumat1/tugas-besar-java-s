@@ -10,7 +10,7 @@ public class home extends JFrame
     public home(){
         JPanel p = new JPanel();
 
-        getContentPane().setBackground(new Color(0,255,255));
+        setContentPane(new JLabel(new ImageIcon("bg/bg.jpg")));
 
 
         //  Menentukan title bar di Frame

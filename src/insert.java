@@ -10,11 +10,14 @@ public class insert extends JFrame {
     Statement stm;
 
     public insert() {
+
         setTitle("Insert Data Obat");
+
+        setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         JTextField txt1 = new JTextField();
         JTextField txt2 = new JTextField();
         JTextField txt3 = new JTextField();
-        getContentPane().setBackground(new Color(0,255,255));
+
 
         JButton button = new JButton("Insert");
         button.addActionListener(new ActionListener() {

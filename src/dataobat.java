@@ -9,7 +9,7 @@ public class dataobat
     public dataobat()
     {
         JFrame f = new JFrame();
-        f.getContentPane().setBackground(new Color(0,255,255));
+
         f.setTitle("Data Obat Apotek Terserah");
         f.pack();
         f.setVisible(true);

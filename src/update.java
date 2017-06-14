@@ -11,7 +11,7 @@ public class update extends JFrame {
 
     public update() {
         setTitle("Update Data obat");
-        getContentPane().setBackground(new Color(0,255,255));
+        setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         JTextField txt = new JTextField();
         JTextField txt1 = new JTextField();
         JTextField txt2 = new JTextField();

@@ -21,6 +21,8 @@ public class login extends JFrame {
         DB.config();
         con = DB.con;
         stat = DB.stm;
+
+        setContentPane(new JLabel(new ImageIcon("bg/bg1.jpg")));
         JTextField txt1 = new JTextField();
         JPasswordField txt2 = new JPasswordField();
         JButton button = new JButton("Login");
