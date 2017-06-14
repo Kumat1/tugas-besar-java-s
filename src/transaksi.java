@@ -6,7 +6,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class transaksi extends JFrame {
 
@@ -24,10 +25,10 @@ public class transaksi extends JFrame {
         con = DB.con;
         stat = DB.stm;
         JTextField txt1 = new JTextField();
-        JLabel txt2 = new JLabel();
-        JLabel txt3 = new JLabel();
-        JLabel txt4 = new JLabel();
-        JLabel total = new JLabel();
+        JTextField txt2 = new JTextField();
+        JTextField txt3 = new JTextField();
+        JTextField txt4 = new JTextField();
+        JTextField total = new JTextField();
 
         JTextField jumlah1 = new JTextField();
 
@@ -92,10 +93,14 @@ public class transaksi extends JFrame {
 //                    while (rs.next()) {
 //                        int idtransaksi = rs.getInt("id_transaksi");
 //                    }
-                    String sep = System.lineSeparator();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" yyyy-MM-dd hh.mm.ss");
+                    String ldt = LocalDateTime.now().format(formatter);
+                    //DateFormat ldt = new SimpleDateFormat("yyyy-MM-dd_hh.mm");
 
+                    String sep = System.lineSeparator();
                     String str = "				Struk Belanja" +sep+
                             sep+"====================================================================" + sep +
+                            sep + "Tanggal - Jam       :  " + ldt + sep +
                             sep + "ID Obat   		    :  " + txt1.getText() +
                             sep + "Nama Obat   		:  " + txt2.getText()  +
                             sep + "Jumlah   		    :  " + jumlah1.getText() + "pc" +
@@ -103,9 +108,10 @@ public class transaksi extends JFrame {
                             sep + "Total Bayar   		:  "+"Rp. " + total.getText() + sep +sep +
 
 
+
                             "            Terimakasih Telah Berbelanja di Apotek Terserah";
 
-                    File newTextFile = new File("struk/struk " + txt2.getText() + ".txt");
+                    File newTextFile = new File("struk/struk" + ldt + ".txt");
                     FileWriter y = new FileWriter(newTextFile);
                     y.write(str);
                     y.close();
@@ -114,14 +120,17 @@ public class transaksi extends JFrame {
                             "Terima kasih", JOptionPane.PLAIN_MESSAGE);
                     txt1.setText("");
                     txt2.setText("");
-                    txt4.setText("");
+                    jumlah1.setText("");
                     txt3.setText("");
+                    total.setText("");
 
 
                 } catch (IOException iox) {
                     iox.printStackTrace();
                 }
             }
+
+
         });
 
         JButton button3 = new JButton("Data Obat");
@@ -190,22 +199,26 @@ public class transaksi extends JFrame {
         e.setBounds(70, 300,500,50);
 
         txt1.setEnabled(true);
-        txt1.setBounds(160, 65, 75, 25);
+        txt1.setBounds(160, 65, 90, 25);
 
         jumlah1.setEnabled(true);
-        jumlah1.setBounds(160, 115, 75, 25);
+        jumlah1.setBounds(160, 115, 90, 25);
 
         txt2.setSize(100, 30);
-        txt2.setBounds(160, 162, 150, 25);
+        txt2.setBounds(160, 162, 90, 25);
+        txt2.setEditable(false);
 
         txt3.setSize(100, 30);
-        txt3.setBounds(160, 212, 150, 25);
+        txt3.setBounds(160, 212, 90, 25);
+        txt3.setEditable(false);
 
         txt4.setSize(100, 30);
-        txt4.setBounds(160, 262,150,25);
+        txt4.setBounds(160, 262,90,25);
+        txt4.setEditable(false);
 
         total.setSize(100,30);
-        total.setBounds(160,312,150,25);
+        total.setBounds(160,312,90,25);
+        total.setEditable(false);
 
         button.setBounds(70, 360, 100, 25);
         button1.setBounds(210, 360, 100, 25);

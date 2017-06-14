@@ -1,0 +1,13 @@
+				Struk Belanja
+
+====================================================================
+
+Tanggal - Jam        :   2017-06-14 08.32.20
+
+ID Obat   		    :  1
+Nama Obat   		:  panadol biru
+Jumlah   		    :  1pc
+Harga Satuan		:  @Rp. 6000
+Total Bayar   		:  Rp. 6000
+
+            Terimakasih Telah Berbelanja di Apotek Terserah

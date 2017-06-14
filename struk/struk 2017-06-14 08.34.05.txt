@@ -1,0 +1,13 @@
+				Struk Belanja
+
+====================================================================
+
+Tanggal - Jam        :   2017-06-14 08.34.05
+
+ID Obat   		    :  
+Nama Obat   		:  
+Jumlah   		    :  pc
+Harga Satuan		:  @Rp. 
+Total Bayar   		:  Rp. 
+
+            Terimakasih Telah Berbelanja di Apotek Terserah
